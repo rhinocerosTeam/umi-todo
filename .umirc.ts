@@ -7,7 +7,7 @@ const config: IConfig =  {
     // ref: https://umijs.org/plugin/umi-plugin-react.html
     ['umi-plugin-react', {
       antd: false,
-      dva: false,
+      dva: true,
       dynamicImport: false,
       title: 'umi-todo',
       dll: false,

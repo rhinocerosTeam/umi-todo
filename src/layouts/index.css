@@ -13,3 +13,26 @@
   color: white;
   margin: 0;
 }
+.menu{
+  background: rgba(47,47,47,0.98); 
+  width: 100%;
+  height: 60px;
+  font-size: 25px;
+}
+.menu section {
+  width: 600px;
+  margin: 0 auto;
+}
+.menu section span{
+  color: #fff;
+  float: left;
+  line-height: 60px;
+}
+.menu section input{
+  margin-top: 8px;
+  height: 35px;
+  width: 400px;
+  float: right;
+  border-radius:5px; 
+  padding: 2px;
+}
