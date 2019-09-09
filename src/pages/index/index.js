@@ -12,22 +12,22 @@ function App(props) {
       e.target.value=""
     }
   }
-  const updateStatusTODO=(e)=>{
+  const updateStatusTODO=(e,index)=>{
       let checked = e.target.checked
-      let index = e.target.getAttribute("data-index");
+      
       let status = checked?1:0
       props.dispatch({type:'index/update',index,status})
   }
-  const deleteTODO=(e)=>{
-      let index = e.target.getAttribute("data-index");
+  const deleteTODO=(e,index)=>{
+      
       props.dispatch({type:'index/delete',index})
   }
-
+  let time= Date.now()
   return (
     <div className={styles.normal}>
       <header className={styles.menu}>
         <section>
-            <span>ToDoList</span>
+            <span>TODO</span>
             <input type="text" placeholder="添加TODO" onKeyUp={addTODO}/>
         </section>
       </header>
@@ -35,20 +35,20 @@ function App(props) {
         <h3>正在进行</h3>
         <ul className={styles.doing}>
           { list&&list.map((todo,index)=>{
-              return (todo.status == 0 && <li key={"doing"+index}>
-              <input type="checkbox" data-index={index} onChange={updateStatusTODO}/>
+              return (todo.status === 0 && <li key={"doing"+index+time}>
+              <input type="checkbox"  onChange={(e)=>{updateStatusTODO(e,index)}}/>
               <span>{todo.text}</span> 
-              <a href="#" data-index={index} onClick={deleteTODO}>-</a>
+              <a href="#" data-index={index} onClick={(e)=>{deleteTODO(e,index)}}>-</a>
             </li>)
             })}
         </ul>
         <h3>已经完成</h3>
         <ul className={styles.finish}>
           {list&&list.map((todo,index)=>{
-            return (todo.status == 1 && <li key={"finish"+index}>
-              <input type="checkbox" data-index={index} checked={true} onChange={updateStatusTODO} />
+            return (todo.status === 1 && <li key={"finish"+index+time}>
+              <input type="checkbox" data-index={index} checked={true} onChange={(e)=>{updateStatusTODO(e,index)}} />
               <span>{todo.text}</span> 
-              <a href="#" data-index={index} onClick={deleteTODO}>-</a>
+              <a href="#" data-index={index} onClick={(e)=>{deleteTODO(e,index)}}>-</a>
             </li>)
           })}
         </ul>

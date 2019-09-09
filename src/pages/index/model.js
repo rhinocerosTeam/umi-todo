@@ -28,7 +28,8 @@ export default {
             yield put({type:'save',payload:{data}})
         },
         *delete(payload,{call,put}){
-            const data = yield call(Service.deleteD,payload)
+            let {index} = payload
+            const data = yield call(Service.deleteD,index)
             yield put({type:'save',payload:{data}})
         },
     },

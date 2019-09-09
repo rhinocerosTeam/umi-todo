@@ -23,6 +23,7 @@ export function add(todo){
    return data
 }
 export function deleteD(index){
+    console.log("deleteD=====>",index)
     let data = JSON.parse(storage.getItem(key)||"[]")
     data.splice(index,1)
     storage.setItem(key,JSON.stringify(data))

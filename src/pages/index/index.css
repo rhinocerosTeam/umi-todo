@@ -1,6 +1,61 @@
+@media (max-width: 900px) { 
+  body{
+    font-size:0.22rem!important;
+  } 
+  .list,.finish{
+    width: 7rem!important;
+  }
+  .list li{
+   
+    border-radius: 0.1rem!important;
+  }
+  .list li span,.finish li span{
+    width: 83%!important;
+    padding:0.2rem 0.15rem 0.2rem 0.1rem!important;
+    line-height: 0.4rem!important;
+    font-size: 0.22rem!important;
+  }
+  .list li input,.finish li input{
+    width: 0.3rem!important;
+    height: 0.3rem!important;
+    border-radius: 0.1rem!important;
+  }
+  .list li a,.finish li a{
+    width: 0.3rem!important;
+    height: 0.24rem!important;
+    font-size: 0.22rem!important;
+    border-radius: 0.24rem!important;
+  }
+  .doing span{
+    font-size:0.22rem!important;
+  }
+  .doing li{
+    border-left: 0.07rem solid #629A9C!important;
+
+  }
+  .menu{
+    height: 1rem!important;
+  }
+  .menu section{
+    width: 7rem!important;
+  }
+  .menu section span{
+    line-height: 1rem!important;
+  }
+  .menu section input{
+    width: 5.5rem!important;
+    height: 0.6rem!important;
+    font-size: 0.22rem!important;
+    margin-top: 0.15rem!important;
+    border-radius: 0.2rem!important;
+    float: auto;
+  }
+}
+
 
 body{
   background: #CDCDCD;
+  font-size: 20px;
 }
 .normal {
   background: #CDCDCD;
@@ -54,7 +109,7 @@ ul{
   border-left: 5px solid grey;
 }
 .list li span{
-  width: 510px;
+  width: 84%;
   display: inline-block;
   font-size: 13px;
   padding:10px 14px 10px 0px;
